@@ -1,5 +1,44 @@
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 14px;
+  border: 3px solid var(--primary);
+}
+
+@layer components{
+  .addButton{
+    @apply flex items-center bg-green-700 hover:bg-green-600 disabled:bg-gray-600 text-white py-2 px-4 text-center transition ease-in-out delay-150 rounded-full drop-shadow-md
+  }
+  .deleteButton{
+    @apply flex items-center bg-red-700 hover:bg-red-600 text-white py-2 px-4 text-center transition ease-in-out delay-150 rounded-full drop-shadow-md
+  }
+  .searchButton{
+    @apply flex items-center bg-testPurple hover:bg-blue-600 text-white py-2 px-4 text-center transition ease-in-out delay-150 rounded-full drop-shadow-md
+  }
+  .resetButton{
+    @apply flex items-center bg-amber-500 hover:bg-amber-400 text-white py-2 px-4 text-center transition ease-in-out delay-150 rounded-full drop-shadow-md
+  }
+  .headingDiv{
+    @apply grid col-span-2 items-center p-2 m-4 bg-white rounded-lg shadow-md
+  }
+  .selectInput{
+    @apply border-2 border-testPurple rounded w-full py-2 px-3 font-medium text-[13px] leading-[16px] bg-white focus:text-gray-700
+  }
+  .labelInput {
+    @apply block text-left text-sm font-medium text-gray-900 dark:text-white
+  }
+}
